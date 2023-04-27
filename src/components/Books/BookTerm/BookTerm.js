@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const BookTerm = (props) => {
+
   return (
     <tr>
-      <td scope={"col"}>{props.term.name}</td>
-      <td scope={"col"}>{props.term.category}</td>
-      <td scope={"col"}>
+      <th scope={"col"}>{props.term.name}</th>
+      <th scope={"col"}>{props.term.category}</th>
+      <th scope={"col"}>
         {props.term.author.name + " " + props.term.author.surname}
-      </td>
-      <td scope={"col"}>{props.term.availableCopies}</td>
-      <td scope={"col"} className={"text-center"}>
+      </th>
+      <th scope={"col"}>{props.term.availableCopies}</th>
+      <th scope={"col"} className={"text-center"}>
         <a
           title={"Delete"}
           className={"btn btn-danger mx-1"}
@@ -34,7 +36,7 @@ const BookTerm = (props) => {
         >
           Mark as taken
         </a>
-      </td>
+      </th>
     </tr>
   );
 };

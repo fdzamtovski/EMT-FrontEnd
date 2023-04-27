@@ -38,11 +38,13 @@ class App extends Component {
                                          onAddBook={this.addBook}/>}/>
                 <Route path={"/books/edit/:id"} exact
                        element={<BookEdit categories={this.state.categories}
+//                         render={() => <BookEdit categories={this.state.categories}
                                           authors={this.state.authors}
                                           onEditBook={this.editBook}
                                           book={this.state.selectedBook}/>}/>
                 <Route path={"/books"} exact
-                       element={<Books books={this.state.books}
+                 element={<Books books={this.state.books}
+//                       render={() => <Books books={this.state.books}
                                        onDelete={this.deleteBook}
                                        onEdit={this.getBook}
                                        onTakeBook={this.takeBook}/>}/>

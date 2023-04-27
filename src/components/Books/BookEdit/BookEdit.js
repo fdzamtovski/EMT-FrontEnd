@@ -1,9 +1,11 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
+//import {useHistory} from 'react-router-dom';
 
 const BookEdit = (props) => {
 
     const navigate = useNavigate();
+//    const history = useHistory();
     const [formData, updateFormData] = React.useState({
         name: "",
         category: 0,
@@ -28,6 +30,7 @@ const BookEdit = (props) => {
 
         props.onEditBook(props.book.id, name, category, author, availableCopies);
         navigate("/books");
+//        history.push("/books");
     }
 
     return (
