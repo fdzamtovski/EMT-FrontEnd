@@ -48,15 +48,15 @@ const BookEdit = (props) => {
                     <div className="form-group my-3">
                         <label>Category</label>
                         <select name="category"
-                                className="form-control"
-                                onChange={handleChange}>
-                            {props.categories.map((term) => {
-                                if (props.book.category !== undefined &&
-                                    props.book.category === term)
-                                    return <option selected={props.book.category} value={term}>{term}</option>
-                                else return <option value={term}>{term}</option>
-                            })}
-                        </select>
+                           className="form-control"
+                           onChange={handleChange}>
+                           {props.categories.map((term) => {
+                             if (props.book.category !== undefined &&
+                                props.book.category === term)
+                                 return <option key={term} selected={props.book.category} value={term}>{term}</option>
+                             else return <option key={term} value={term}>{term}</option>
+                        })}
+                   </select>
                     </div>
                     <div className="form-group my-3">
                         <label>Author</label>
@@ -66,9 +66,9 @@ const BookEdit = (props) => {
                             {props.authors.map((term) => {
                                 if (props.book.author !== undefined &&
                                     props.book.author.id === term.id)
-                                    return <option selected={props.book.author.id}
+                                    return <option key={term.id} selected={props.book.author.id}
                                                    value={term.id}>{term.name + " " + term.surname}</option>
-                                else return <option value={term.id}>{term.name + " " + term.surname}</option>
+                                else return <option key={term.id} value={term.id}>{term.name + " " + term.surname}</option>
                             })}
                         </select>
                     </div>
