@@ -24,8 +24,6 @@ const header = (props) => {
                                 <Link className="nav-link" to={"/books"}>Books</Link>
                             </li>
                         </ul>
-                        <Link className="btn btn-outline-info mx-2" to={"/login"}>Login</Link>
-                        <Link className="btn btn-outline-warning" to={"/register"}>Register</Link>
                     </div>
                 </div>
             </nav>

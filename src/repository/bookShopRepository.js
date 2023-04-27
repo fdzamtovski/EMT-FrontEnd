@@ -35,12 +35,7 @@ const bookShopRepository = {
 
     takeBook: (id) => {
         return axios.post(`/books/take/${id}`);
-    }.
-    login: (username, password) => {
-                return axios.post("/login", {
-                    "username": username,
-                    "password": password
-                });
-            },
+    }
+
 }
 export default bookShopRepository;
