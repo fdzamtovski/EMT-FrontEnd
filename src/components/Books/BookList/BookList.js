@@ -2,6 +2,7 @@ import React from "react";
 import ReactPaginate from 'react-paginate'
 import BookTerm from "../BookTerm/BookTerm";
 import {Link} from "react-router-dom";
+import { Component } from "react";
 
 class Books extends React.Component {
     constructor(props) {
